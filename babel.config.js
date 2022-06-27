@@ -13,7 +13,17 @@ module.exports = {
           useBuiltIns: "entry",
           corejs: "3.9.1"
         },
-      ]
+      ],
+      "@babel/preset-react",
+      "@babel/preset-typescript",
+    ],
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          regenerator: true,
+        },
+      ],
     ]
   }
   

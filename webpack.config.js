@@ -6,7 +6,7 @@ const babelOptions = require('./babel.config')
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js', // 打包入口
+  entry: './src/index.tsx', // 打包入口
   output: {
     filename: '[name].bundle.js', // 输出文件名
     path: path.join(__dirname, 'dist') // 输出文件目录
