@@ -12,7 +12,7 @@
 - [ ] Babel
 - [ ] TypeScript
 - [ ] SCSS
-- [ ] ESLint
+- [ ] ESLint + Prettier
 - [ ] jest
 
 ## 展望
