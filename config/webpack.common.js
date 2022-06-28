@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, '../src/index.tsx'), // 打包入口
   output: {
     filename: '[name].bundle.js', // 输出文件名
-    path: path.join(__dirname, 'dist') // 输出文件目录
+    path: path.join(__dirname, 'dist'), // 输出文件目录
   },
   resolve: {
     alias: {
@@ -17,32 +17,33 @@ module.exports = {
     mainFiles: ['index'],
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-  module: { 
-    rules: [ // 转换规则
-    {
+  module: {
+    rules: [
+      // 转换规则
+      {
         test: /\.(js|ts)x?$/i,
         exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
-            options: babelOptions
-          }
-        ]
+            options: babelOptions,
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader,'css-loader','postcss-loader'] // 对应的 Loader 名称
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'], // 对应的 Loader 名称
       },
       {
         test: /\.(scss|sass)$/,
-        use: [MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader'] // 对应的 Loader 名称
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'], // 对应的 Loader 名称
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
         type: 'asset/resource',
         generator: {
           // 输出文件位置以及文件名
-          filename: "images/[hash][ext]"
+          filename: 'images/[hash][ext]',
         },
       },
       {
@@ -50,23 +51,24 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           // 输出文件位置以及文件名
-          filename: "fonts/[hash][ext]"
+          filename: 'fonts/[hash][ext]',
         },
       },
       {
         test: /\.svg$/,
         type: 'asset/source',
       },
-    ]
+    ],
   },
-  plugins:[ // 配置插件
+  plugins: [
+    // 配置插件
     new HtmlWebpackPlugin({
       favicon: path.resolve(__dirname, '../public/favicon.ico'),
-      template: path.resolve(__dirname, '../public/index.html')
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-        filename: '[name].[hash:8].css'
-      }),
+      filename: '[name].[hash:8].css',
+    }),
   ],
 }

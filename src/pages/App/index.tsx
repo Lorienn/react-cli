@@ -1,10 +1,11 @@
-import React from 'react';
+import React from 'react'
 import logo from '@/assets/images/logo.svg'
+
 import './index.scss'
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className="app">
       <span
         dangerouslySetInnerHTML={{
           __html: logo,
@@ -12,7 +13,7 @@ const App = () => {
       />
       Welcome to React CLI!
     </div>
-  );
-};
+  )
+}
 
 export default App
