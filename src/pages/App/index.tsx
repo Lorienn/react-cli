@@ -1,9 +1,10 @@
 import React from 'react';
+import './index.scss'
 
 const App = () => {
   return (
-    <div>
-      React CLI
+    <div className='app'>
+      Welcome to React CLI!
     </div>
   );
 };

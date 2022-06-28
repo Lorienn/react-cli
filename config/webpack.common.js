@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const babelOptions = require('./babel.config')
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.tsx', // 打包入口
   output: {
     filename: '[name].bundle.js', // 输出文件名
@@ -62,10 +61,4 @@ module.exports = {
         filename: '[name].[hash:8].css'
       }),
   ],
-  devServer: {
-    static: path.resolve(__dirname, 'public'), // 静态文件目录
-    compress: true, //是否启动压缩 gzip
-    port: 8080, // 端口号
-    // open:true  // 是否自动打开浏览器
-  }
 }
