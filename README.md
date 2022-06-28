@@ -4,15 +4,19 @@
 
 使用 webpack 5，从 0 到 1 搭建一个 React 项目
 
+## 更新日志
+
+[TODOS](https://github.com/Lorienn/react-cli/blob/master/docs/index.md)
+
 ## 特性
 
-- [ ] React
+- [x] React
 - [ ] React Router
 - [ ] React Redux
-- [ ] Babel
-- [ ] TypeScript
-- [ ] SCSS
-- [ ] ESLint
+- [x] Babel
+- [x] TypeScript
+- [x] SCSS
+- [x] ESLint
 - [ ] jest
 
 ## 展望
