@@ -6,7 +6,7 @@
 
 - [x] 支持 图片文件（jpg、png、svg）的引入
 
-- [ ] 代码格式化&合规检测（ESLint + Prettier）
+- [ ] 代码格式化&合规检测（ESLint + Prettier + Husky）
 
 - [ ] 支持 CSS Modules 的使用
 
