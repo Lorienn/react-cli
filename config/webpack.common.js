@@ -5,11 +5,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const babelOptions = require('./babel.config')
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js', // 打包入口
+  entry: path.resolve(__dirname, '../src/index.tsx'), // 打包入口
   output: {
     filename: '[name].bundle.js', // 输出文件名
     path: path.join(__dirname, 'dist') // 输出文件目录
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src'),
+    },
+    mainFiles: ['index'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: { 
     rules: [ // 转换规则
@@ -55,17 +61,12 @@ module.exports = {
   },
   plugins:[ // 配置插件
     new HtmlWebpackPlugin({
-        template: './src/index.html'
+      favicon: path.resolve(__dirname, '../public/favicon.ico'),
+      template: path.resolve(__dirname, '../public/index.html')
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: '[name].[hash:8].css'
       }),
   ],
-  devServer: {
-    static: path.resolve(__dirname, 'public'), // 静态文件目录
-    compress: true, //是否启动压缩 gzip
-    port: 8080, // 端口号
-    // open:true  // 是否自动打开浏览器
-  }
 }
