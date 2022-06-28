@@ -6,19 +6,16 @@
 
 ## 更新日志
 
-[TODOS](https://github.com/Lorienn/react-cli/blob/master/docs/index.md)
+[更新日志](https://github.com/Lorienn/react-cli/blob/master/docs/index.md)
 
-## 特性
+## 默认配置
 
-- [x] React
-- [ ] React Router
-- [ ] React Redux
-- [x] Babel
-- [x] TypeScript
-- [x] SCSS
-- [x] ESLint
-- [ ] jest
+|          语言           |               框架               |                     合规检测                     | 测试 |
+| :---------------------: | :------------------------------: | :----------------------------------------------: | :--: |
+| Babel、TypeScript、SCSS | React、React Router、React Redux | ESLint、Prettier、Husky、lint-staged、commitlint | Jest |
 
 ## 展望
 
-希望通过本次实践，积累一定 CLI 开发的经验后，能够写出一个形如 Vue CLI 的真·脚手架工具
+**2022/6/25** 希望通过本次实践，积累一定 CLI 开发的经验后，能够写出一个形如 Vue CLI 的真·脚手架工具。
+
+**2022/6/28** 开始思考，究竟是做成一个通用化的脚手架，还是向类@vue/cli 的命令行工具迈进好呢？
