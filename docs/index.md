@@ -8,8 +8,6 @@
 
 - [ ] 支持 CSS Modules 的使用
 
-- [ ] index.html 配置化
-
 #### fix
 
 - [ ] 修复引入 index.tsx 时的报错（别名配置）
