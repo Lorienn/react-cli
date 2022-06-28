@@ -18,7 +18,11 @@
     /* Completeness */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
 
-    "typeRoots": ["typings", "node_modules/@types","../../node_modules/@types"]
+    // "typeRoots": ["typings", "node_modules/@types","../../node_modules/@types"],
+    // "baseUrl": "./",
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    // },
   },
   "exclude": ["node_modules"]
 }
