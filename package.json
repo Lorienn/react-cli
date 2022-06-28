@@ -6,7 +6,18 @@
   "scripts": {
     "dev": "webpack serve --config config/webpack.dev.js",
     "test": "webpack --config config/webpack.prod.js",
-    "build": "webpack --config config/webpack.prod.js"
+    "build": "webpack --config config/webpack.prod.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --fix --quiet"
+    ],
+    "src/**/*.scss": [
+      "prettier --parser=css --write",
+      "stylelint --fix"
+    ]
   },
   "author": "Lorienn",
   "license": "ISC",
@@ -16,11 +27,15 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@commitlint/config-conventional": "^17.0.3",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "commitlint": "^17.0.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.14",
