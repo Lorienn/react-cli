@@ -6,7 +6,7 @@
 
 ## 更新日志
 
-[更新日志](https://github.com/Lorienn/react-cli/blob/master/docs/index.md)
+[changelog](https://github.com/Lorienn/react-cli/blob/master/docs/index.md)
 
 ## 默认配置
 
