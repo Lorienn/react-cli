@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from '@/assets/images/logo.svg'
 
-import './index.scss'
+import styles from './index.module.scss'
 
 interface LogoProps {
   title: string
@@ -10,7 +10,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ title }: LogoProps) => {
   return (
-    <div className="logo">
+    <div className={styles.logo}>
       <span
         dangerouslySetInnerHTML={{
           __html: logo,

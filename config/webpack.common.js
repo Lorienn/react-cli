@@ -31,12 +31,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'], // 对应的 Loader 名称
-      },
-      {
         test: /\.(scss|sass)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'], // 对应的 Loader 名称
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: '[local]__[hash:base64:6]',
+              },
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -50,7 +59,6 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
         type: 'asset/resource',
         generator: {
-          // 输出文件位置以及文件名
           filename: 'fonts/[hash][ext]',
         },
       },

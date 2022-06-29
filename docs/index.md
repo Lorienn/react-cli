@@ -8,11 +8,11 @@
 
 - [x] 代码格式化&合规检测（ESLint + Prettier + Husky）
 
-- [ ] 支持 CSS Modules 的使用
+- [x] 支持 CSS Modules 的使用
 
-- [ ] 导入模块时新增文件路径提示
+- [x] React 等第三方库的类型补充
 
-- [ ] 配置模块按序导入
+- [x] 导入模块时新增文件路径提示
 
 #### fix
 
