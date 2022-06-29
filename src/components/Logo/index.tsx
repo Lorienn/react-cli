@@ -1,19 +1,24 @@
 import React from 'react'
+
 import logo from '@/assets/images/logo.svg'
 
 import './index.scss'
 
-const App = () => {
+interface LogoProps {
+  title: string
+}
+
+const Logo: React.FC<LogoProps> = ({ title }: LogoProps) => {
   return (
-    <div className="app">
+    <div className="logo">
       <span
         dangerouslySetInnerHTML={{
           __html: logo,
         }}
       />
-      Welcome to React CLI!
+      <h1>{title}</h1>
     </div>
   )
 }
 
-export default App
+export default Logo
