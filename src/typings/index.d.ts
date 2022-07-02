@@ -5,3 +5,8 @@ declare module '*.jpeg'
 declare module '*.gif'
 declare module '*.bmp'
 declare module '*.tiff'
+
+declare module '*.module.scss' {
+  const content: { [className: string]: string }
+  export = content
+}
